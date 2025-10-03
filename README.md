@@ -1,75 +1,89 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[todo_list_readme.md](https://github.com/user-attachments/files/22680539/todo_list_readme.md)
+# To-Do List React
 
-Currently, two official plugins are available:
+Une application **To-Do List** moderne et élégante développée avec **React** et **TypeScript**.  
+Cette application permet de gérer vos tâches, de marquer celles qui sont faites, de supprimer des tâches avec confirmation, et de stocker toutes les informations dans le **localStorage** pour qu’elles persistent entre les sessions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Fonctionnalités
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Ajouter une nouvelle tâche avec :
+  - Titre (obligatoire)
+  - Description (optionnelle)
+  - Date d’échéance (optionnelle)
+- Marquer une tâche comme **faite** ou revenir à **à faire**
+- Supprimer une tâche avec une **confirmation**
+- Compteur des tâches **à faire** et **faites**
+- Persistance des tâches grâce au **localStorage**
+- Interface moderne et responsive avec styles CSS élégants
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **Cloner le dépôt :**
+```bash
+git clone https://github.com/lolo35800/reactprojet.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. **Se déplacer dans le dossier :**
+```bash
+cd reactprojet
 ```
+
+3. **Installer les dépendances :**
+```bash
+npm install
+```
+
+4. **Lancer l’application :**
+```bash
+npm start
+```
+
+L’application sera accessible sur `http://localhost:5173`.
+
+---
+
+## Utilisation
+
+1. Tapez le **titre** de votre tâche, ajoutez éventuellement une **description** et une **date limite**.
+2. Cliquez sur **Ajouter** pour ajouter la tâche à la liste.
+3. Utilisez le bouton **Marquer faite / Marquer à faire** pour suivre l’état de vos tâches.
+4. Cliquez sur **Supprimer** pour supprimer une tâche, vous serez invité à confirmer.
+5. Les compteurs affichent le nombre de tâches **à faire** et **faites** en temps réel.
+
+---
+
+## Technologies utilisées
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- CSS moderne pour un design simple et élégant
+- LocalStorage pour la persistance des données
+
+---
+
+## Contribuer
+
+Les contributions sont les bienvenues !  
+1. Fork le projet  
+2. Crée une branche (`git checkout -b feature/ma-fonctionnalite`)  
+3. Commit tes changements (`git commit -m 'Ajout d’une fonctionnalité'`)  
+4. Push ta branche (`git push origin feature/ma-fonctionnalite`)  
+5. Ouvre une Pull Request
+
+---
+
+## Auteur
+
+- Sébastien
+
+---
+
+## Licence
+
+Ce projet est sous licence MIT.
+
