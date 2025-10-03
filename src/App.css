@@ -1,42 +1,157 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* App.css */
+
+/* Reset rapide pour éviter les styles dégueulasses par défaut */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* Container principal */
+div {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre */
+h1 {
   text-align: center;
+  color: #2d89ef;
+  margin-bottom: 10px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Sous-titre */
+p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Formulaire */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+input[type="text"],
+input[type="date"],
+textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
 }
 
-.card {
-  padding: 2em;
+input:focus,
+textarea:focus {
+  border-color: #2d89ef;
+  outline: none;
 }
 
-.read-the-docs {
+/* Boutons */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+button[type="submit"] {
+  background: #2d89ef;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background: #1c5db6;
+}
+
+button {
+  background: #e4e6eb;
+  color: #333;
+  margin-left: 5px;
+}
+
+button:hover {
+  background: #d1d3d7;
+}
+
+/* Liste des tâches */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: #f9fafc;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+li:hover {
+  background: #f0f4f9;
+  transform: translateX(3px);
+}
+
+/* Texte de la tâche */
+li strong {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+li span {
+  font-size: 12px;
   color: #888;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* Tâches marquées comme faites */
+li.done {
+  background-color: #d4edda; /* vert pâle */
+  color: #2f6627;            /* texte vert foncé */
+  text-decoration: line-through; /* barre sur le texte */
+  opacity: 0.8;              /* léger effet de transparence */
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+/* Optional : effet au hover pour les tâches faites */
+li.done:hover {
+  background-color: #c3e6cb;
+  transform: translateX(0); /* pas de décalage pour les faites */
+}
+
+/* Texte barré pour les tâches faites */
+.done-text {
+  text-decoration: line-through;
+  color: #2f6627; /* vert foncé */
+}
+
+.counters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #2d89ef;
 }
